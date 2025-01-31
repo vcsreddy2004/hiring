@@ -1,4 +1,5 @@
-# Hiring Test for Python/Django Developers
+# Hiring Test for Backend Developers
+- NOTE : You can use NodeJs/Python/ (Django/ExpressJS or any other framework of your choice as well)
 
 ## **Objective**
 The objective of this test is to evaluate the candidate’s ability to:
@@ -13,7 +14,7 @@ The objective of this test is to evaluate the candidate’s ability to:
 ## **Task Requirements**
 
 ### **1. Model Design**
-- Create a Django model to store **FAQs**.
+- Create a model to store **FAQs**.
 - Each FAQ should have:
   - A **question** (TextField)
   - An **answer** (RichTextField for WYSIWYG editor support)
@@ -25,12 +26,12 @@ The objective of this test is to evaluate the candidate’s ability to:
 - Ensure that the WYSIWYG editor supports **multilingual content**.
 
 ### **3. API Development**
-- Create a **Django REST API** for managing FAQs.
+- Create a ** REST API** for managing FAQs.
 - Support **language selection** via `?lang=` query parameter.
 - Ensure responses are **fast and efficient** using pre-translation.
 
 ### **4. Caching Mechanism**
-- Implement **Django cache framework** to store translations.
+- Implement ** cache framework** to store translations.
 - Use **Redis** for improved performance.
 
 ### **5. Multi-language Translation Support**
@@ -38,14 +39,14 @@ The objective of this test is to evaluate the candidate’s ability to:
 - Automate translations during object creation.
 - Provide **fallback to English** if translation is unavailable.
 
-### **6. Django Admin Panel**
-- Register the **FAQ model** in the Django Admin.
+### **6.  Admin Panel**
+- Register the **FAQ model** in the  Admin site or create one seperately.
 - Enable a **user-friendly admin interface** for managing FAQs.
 
 ### **7. Unit Tests & Code Quality**
-- Write **unit tests** using `pytest` or Django’s built-in `unittest`.
+- Write **unit tests** using `pytest` or `mocha`/`chai`.
 - Ensure tests cover **model methods and API responses**.
-- Follow **PEP8 guidelines** and use `flake8` for linting.
+- Follow **PEP8/ES6 guidelines** and use `flake8/JS tools` for linting.
 
 ### **8. Documentation**
 - Write a **detailed README** with:
