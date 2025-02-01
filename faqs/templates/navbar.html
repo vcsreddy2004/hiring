@@ -1,0 +1,53 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+<div class="navbar navbar-dark bg-dark navbar-expand-sm justify-content-between">
+    <div class="navbar-nav">
+        <div class="nav_item">
+            <a href="/" class="nav-link"> <i class="fa fa-home"></i> Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Language
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item lang-select" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item lang-select" href="#" data-lang="hi">हिन्दी (Hindi)</a></li>
+                        <li><a class="dropdown-item lang-select" href="#" data-lang="bn">বাংলা (Bengali)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const langItems = document.querySelectorAll(".lang-select");
+        const langDropdown = document.getElementById("languageDropdown");
+        
+        // Check the language from the URL or localStorage
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentLang = urlParams.get("lang") || localStorage.getItem("selectedLang") || "en";
+        
+        // Set the dropdown label without modifying dropdown functionality
+        if (currentLang === "hi") {
+            langDropdown.textContent = "हिन्दी (Hindi)";
+        } else if (currentLang === "bn") {
+            langDropdown.textContent = "বাংলা (Bengali)";
+        } else {
+            langDropdown.textContent = "English";
+        }
+
+        // Language change handler
+        langItems.forEach(item => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault();
+                const selectedLang = this.getAttribute("data-lang");
+                localStorage.setItem("selectedLang", selectedLang);
+                window.location.href = `?lang=${selectedLang}`;  // Reload page with selected language
+            });
+        });
+    });
+</script>

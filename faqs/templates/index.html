@@ -1,0 +1,22 @@
+{% include 'navbar.html' %}
+<html>
+    <head>
+        <title>
+            Home
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+         <div class="card col-md-6 m-auto shadow-lg mt-3">
+            <div class="card-header">
+                {% for faq in faqs %} 
+                    <details>
+                    <summary>{{faq.question}}</summary>
+                        {{faq.answer}}
+                    </details>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
