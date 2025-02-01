@@ -2,23 +2,23 @@
 <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
 <div class="navbar navbar-dark bg-dark navbar-expand-sm justify-content-between">
     <div class="navbar-nav">
-        <div class="nav_item">
+        <div class="nav-item">
             <a href="/" class="nav-link"> <i class="fa fa-home"></i> Home</a>
         </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select Language
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item lang-select" href="#" data-lang="en">English</a></li>
-                        <li><a class="dropdown-item lang-select" href="#" data-lang="hi">हिन्दी (Hindi)</a></li>
-                        <li><a class="dropdown-item lang-select" href="#" data-lang="bn">বাংলা (Bengali)</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto class will push the content to the right -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Language
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li><a class="dropdown-item lang-select" href="#" data-lang="en">English</a></li>
+                    <li><a class="dropdown-item lang-select" href="#" data-lang="hi">हिन्दी (Hindi)</a></li>
+                    <li><a class="dropdown-item lang-select" href="#" data-lang="bn">বাংলা (Bengali)</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
     <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
 </div>
